@@ -1,0 +1,23 @@
+{
+  "name": "spa-busca-cep-angularjs",
+  "version": "1.0.0",
+  "description": "Aplicacao em AngularJs 1.6.9 que faz integração com a API do ViaCep",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Jasmine",
+    "Karma"
+  ],
+  "author": "Diogo Reis",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.9",
+    "angular-mocks": "^1.6.9",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1"
+  }
+}

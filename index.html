@@ -1,0 +1,78 @@
+
+<html ng-app="buscaCep">
+<head>
+	<title>BuscaCepComAngularJS</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/buscaCep.css">
+
+	<script src="node_modules/angular/angular.js"></script> 
+	<script src="node_modules/angular-mocks/angular-mocks.js"></script>
+	<script src="js/buscaCep.js"></script>
+	<script src="js/controllers/buscaCepController.js"></script> 
+	<script src="js/services/buscaCepService.js"></script> 
+	
+</head>
+<body >
+	<div class="container" ng-controller="BuscaCepController">
+		<div class="row">
+			<div class="jumbotron">
+				<h2>
+					{{TituloTela}}
+				</h2>
+			</div>
+			<fieldset class="container">
+				<form id="idFormPesquisa" name="formPesquisaCep">
+					<div class="row">
+						<div class="col-md-2 form-group">
+							<h4>Informe o CEP:</h4>
+						</div>
+						<div class="col-md-3 form-group" >
+							<input type="text" id="cepPesquisa" ng-keyup="pesquisaCep($event.target.value); mascaraCep(ngCep)" ng-model="ngCep" name="nameCepPesquisa" class="form-control" style=" margin-left: -70px; width: 110px; height: 25px; margin-top: 8px;"
+						 maxlength="9">
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-2 form-group">
+							<h4>CEP:</h4>
+							<input type="text" class="form-control" id="idCep" name="nameCep" ng-model="dadosCep.cep" disabled >
+						</div>
+						<div class="col-md-5 form-group">
+							<h4>Logradouro:</h4>
+							<input type="text" class="form-control" id="idLogradouro" name="nameLogradouro" ng-model="dadosCep.logradouro" disabled >
+						</div>
+						<div class="col-md-5 form-group">
+							<h4>Complemento:</h4>
+							<input type="text" class="form-control" id="idComplemento" name="nameComplemento" ng-model="dadosCep.complemento" disabled >
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 form-group">
+							<h4>Bairro</h4>
+							<input type="text" class="form-control" id="idBairro" name="nameBairro" ng-model="dadosCep.bairro" disabled />
+						</div>
+						<div class=" col-md-3 form-group">
+							<h4>Localidade</h4>
+							<input type="text" class="form-control" id="idLocalidade" name="nameLocalidade" ng-model="dadosCep.cidade" disabled />
+						</div>
+						<div class=" col-md-1 form-group">
+							<h4>Estado</h4>
+							<input type="text" class="form-control" id="idEstado" name="nameEstado"  ng-model="dadosCep.estado" disabled  style="width:50px;"/>
+						</div>
+						<div class=" col-md-3 form-group">
+							<h4>IBGE</h4>
+							<input type="text" class="form-control" id="idIbge" name="nameIbge" ng-model="dadosCep.ibge" disabled  />
+						</div>
+						<div class=" col-md-2 form-group">
+							<button class="btn btn-primary mr-4" ng-click="limparCampos()" style="width: 120px; margin-left: 42px;  margin-top: 38px;">
+								Limpar
+							</button>
+						</div>
+					</div>
+				</form>
+			</fieldset>
+		</div>
+	</div>
+</body>
+</html>
