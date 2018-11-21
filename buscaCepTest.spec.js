@@ -1,6 +1,6 @@
 /*
 Não consegui executar os testes com sucesso devido o karma não reconhecer o módulo "buscaCep"
-e o controller"BuscaCepController". Mudei a configuração de alguns arquivos porém consegui encontrar 
+e o controller"BuscaCepController". Mudei a configuração de alguns arquivos porém não consegui encontrar 
 a solução para este problema no karma.
 */
 describe("Teste do Controlador (BuscaCepController)", function () {
